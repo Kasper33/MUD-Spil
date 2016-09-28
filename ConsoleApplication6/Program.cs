@@ -11,6 +11,7 @@ namespace ConsoleApplication6
         static void Main(string[] args)
         {
             Console.WriteLine("Igger");
+            Console.ReadLine();
         }
     }
 }
