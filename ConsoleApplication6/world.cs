@@ -13,9 +13,9 @@ namespace ConsoleApplication6
         {
             rooms = new List<Room>();
             Room r1 = new Room("Mark", "En stor og grøn mark med masser af smukke planter og dyr");
-            Room r2 = new Room("Hus", "Indgangen til et mørkt hus");
-            Room r3 = new Room("Mørkt rum", "Et meget mørkt rum");
-            Room r4 = new Room("Fangekælder", "Uhyggeligt rum med masser af sjove lyde, du kan ikke se noget i dette rum");
+            Room r2 = new Room("", "");
+            Room r3 = new Room("", "");
+            Room r4 = new Room("", "");
 
             rooms.Add(r1);
             rooms.Add(r2);
