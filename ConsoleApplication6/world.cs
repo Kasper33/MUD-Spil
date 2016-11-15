@@ -12,7 +12,7 @@ namespace ConsoleApplication6
         public World()
         {
             rooms = new List<Room>();
-            Room r1 = new Room("Start", "En stor og grøn mark med masser af smukke planter og dyr");
+            Room r1 = new Room("Start", "Du står på en stor grøn mark, med masser af smukke planter og dyr");
             Room r2 = new Room("Forladt Hus", "");
             Room r3 = new Room("Helbredelses fontæne", "");
             Room r4 = new Room("Mørk Skov", "");
@@ -70,7 +70,7 @@ namespace ConsoleApplication6
             r12.AddNorth(r15);
             r13.AddWest(r12);
             r14.AddEast(r12);
-            r15.AddNorth(??????);
+            r15.AddNorth(r14);
             r15.AddSouth(r12);
             
 
