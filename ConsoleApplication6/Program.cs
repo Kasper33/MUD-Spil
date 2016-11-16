@@ -10,10 +10,17 @@ namespace ConsoleApplication6 {
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine();
-            Console.WriteLine("");
-            Console.ReadLine();
+            World w = new World();
+            w.PrintWorld();
+            bool playing = false;
+
+
+            playing = true;
+            while (playing) {
+                Console.WriteLine();
+                Console.WriteLine("");
+                Console.ReadLine();
+            }
         }
     }
 }
