@@ -11,16 +11,31 @@ namespace ConsoleApplication6 {
         static void Main(string[] args)
         {
             World w = new World();
-            w.PrintWorld();
-            bool playing = false;
-
-
-            playing = true;
-            while (playing) {
-                Console.WriteLine();
-                Console.WriteLine("");
-                Console.ReadLine();
+            bool playing = true;
+            Console.WriteLine("Hello!! Welcome to India Quest");
+            Room start = w.GetRoom("Start");
+            Player p = new Player();
+            if(start!=null)
+            {
+                p.CurrentRoom = start;
+                Console.WriteLine(p.CurrentRoom);
             }
+            while (playing) {
+                
+                string input = Console.ReadLine();
+                if(input.ToLower().Equals("exit"))
+                {
+                    playing = false;
+                }
+                else
+                {
+                    HandleGame();
+                }
+            }
+        }
+
+        private static void HandleGame()
+        {
         }
     }
 }

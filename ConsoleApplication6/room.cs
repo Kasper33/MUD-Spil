@@ -39,15 +39,13 @@ namespace ConsoleApplication6
             east = r;
         }
 
+
         public override string ToString()
         {
             string s = "";
             s += "Navn: " + navn + "\n";
             s += "Beskrivelse: " + beskrivelse + "\n";
-            if (north != null) s += "Udgang til: " + north.navn + "\n";
-            if (south != null) s += "Udgang til: " + south.navn + "\n";
-            if (west != null) s += "Udgang til: " + west.navn + "\n";
-            if (east != null) s += "Udgang til: " + east.navn + "\n";
+
             return s;
         }
 

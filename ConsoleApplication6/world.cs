@@ -84,6 +84,16 @@ namespace ConsoleApplication6
             }
         }
 
-
+        public Room GetRoom(string navn)
+        {
+            foreach (Room r in rooms)
+            {
+                if(r.navn.Equals(navn))
+                {
+                    return r;
+                }
+            }
+            return null;
+        }
     }
 }
