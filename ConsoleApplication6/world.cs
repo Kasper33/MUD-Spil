@@ -8,7 +8,8 @@ namespace ConsoleApplication6
 {
     public class World
     {
-        List<Room> rooms;
+        public List<Room> rooms;
+        public Player p = new Player();
         public World()
         {
             rooms = new List<Room>();

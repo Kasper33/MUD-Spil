@@ -10,5 +10,10 @@ namespace ConsoleApplication6
     {
         public string navn;
         public Room CurrentRoom;
+
+        public void EnterRoom()
+        {
+            Console.WriteLine(CurrentRoom.ToString());
+        }
     }
 }
