@@ -49,19 +49,20 @@ namespace ConsoleApplication6 {
                     {
                         w.p.CurrentRoom = w.p.CurrentRoom.north;
                         w.p.EnterRoom();
+						Console.WriteLine("You walk north.");
                     }
                 }
                 if (walk.ToLower().Equals("south") || (walk.ToLower().Equals("s")))
                 {
-                    Console.WriteLine("Du går mod syd");
+                    Console.WriteLine("You walk south.");
                 }
                 if (walk.ToLower().Equals("east") || (walk.ToLower().Equals("e")))
                 {
-                    Console.WriteLine("Du går mod øst");
+                    Console.WriteLine("You walk east.");
                 }
                 if (walk.ToLower().Equals("west") || (walk.ToLower().Equals("w")))
                 {
-                    Console.WriteLine("Du går mod vest");
+                    Console.WriteLine("You walk west.");
                 }
                 if(walk.ToLower().Equals("stop"))
                 {
