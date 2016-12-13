@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +28,7 @@ namespace ConsoleApplication6
             Room r13 = new Room("Butik", "");
             Room r14 = new Room("Gammelt ødelagt hus", "");
             Room r15 = new Room("Gammel Mand", "");
+			Room r16 = new Room("Kevin the merciful", "Kevin spares your life and sends you home.");
 
             rooms.Add(r1);
             rooms.Add(r2);
@@ -44,6 +45,7 @@ namespace ConsoleApplication6
             rooms.Add(r13);
             rooms.Add(r14);
             rooms.Add(r15);
+			rooms.Add(r16);
 
             r1.AddNorth(r10);
             r1.AddWest(r2);
@@ -71,7 +73,11 @@ namespace ConsoleApplication6
             r12.AddNorth(r15);
             r13.AddWest(r12);
             r14.AddEast(r12);
+<<<<<<< HEAD
             r15.AddNorth(r14);
+=======
+            r15.AddNorth(r16);
+>>>>>>> a8ea032... test
             r15.AddSouth(r12);
             
 
