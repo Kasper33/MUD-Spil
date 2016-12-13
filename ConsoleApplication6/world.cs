@@ -13,7 +13,7 @@ namespace ConsoleApplication6
         public World()
         {
             rooms = new List<Room>();
-            Room r1 = new Room("Start", "Du står på en stor grøn mark, med masser af smukke planter og dyr");
+            Room r1 = new Room("Start", "Welcome champion, you have accepted the challenge to purge all autism from this world. Continue north and discover a small town, travel west and find an abandoned hut or move east and go to the dark forest.");
             Room r2 = new Room("Forladt Hus", "");
             Room r3 = new Room("Helbredelses fontæne", "");
             Room r4 = new Room("Mørk Skov", "");
@@ -73,11 +73,7 @@ namespace ConsoleApplication6
             r12.AddNorth(r15);
             r13.AddWest(r12);
             r14.AddEast(r12);
-<<<<<<< HEAD
-            r15.AddNorth(r14);
-=======
             r15.AddNorth(r16);
->>>>>>> a8ea032... test
             r15.AddSouth(r12);
             
 
