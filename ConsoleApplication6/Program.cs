@@ -49,21 +49,38 @@ namespace ConsoleApplication6 {
                     {
                         w.p.CurrentRoom = w.p.CurrentRoom.north;
                         w.p.EnterRoom();
-						Console.WriteLine("You walk north.");
+						Console.WriteLine("You walk north.")
                     }
                 }
                 if (walk.ToLower().Equals("south") || (walk.ToLower().Equals("s")))
                 {
-                    Console.WriteLine("You walk south.");
+					if (!w.p.CurrentRoom.south.Equals(null))
+					{
+						w.p.CurrentRoom = w.p.CurrentRoom.south;
+						w.p.EnterRoom();
+						Console.WriteLine("You walk south.")
+					}
                 }
                 if (walk.ToLower().Equals("east") || (walk.ToLower().Equals("e")))
                 {
-                    Console.WriteLine("You walk east.");
-                }
+					if (!w.p.CurrentRoom.east.Equals(null))
+					{
+						w.p.CurrentRoom = w.p.CurrentRoom.east;
+						w.p.EnterRoom();
+						Console.WriteLine("You walk east.")
+
+					}
+				}
                 if (walk.ToLower().Equals("west") || (walk.ToLower().Equals("w")))
                 {
-                    Console.WriteLine("You walk west.");
-                }
+					if (!w.p.CurrentRoom.west.Equals(null))
+					{
+						w.p.CurrentRoom = w.p.CurrentRoom.west;
+						w.p.EnterRoom();
+						Console.WriteLine("You walk west.")
+
+					}
+				}
                 if(walk.ToLower().Equals("stop"))
                 {
                     isMoving = false;
