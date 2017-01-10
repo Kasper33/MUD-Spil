@@ -14,20 +14,20 @@ namespace ConsoleApplication6
         {
             rooms = new List<Room>();
             Room r1 = new Room("Start", "Welcome champion, you have accepted the challenge to purge all autism from this world. Continue north and discover a small town, travel west and find an abandoned hut or move east and go to the dark forest.");
-            Room r2 = new Room("Forladt Hus", "");
-            Room r3 = new Room("Helbredelses fontæne", "");
-            Room r4 = new Room("Mørk Skov", "");
-            Room r5 = new Room("Monster og kryds", "");
+            Room r2 = new Room("Abandoned Hut", "");
+            Room r3 = new Room("Health fountain", "");
+            Room r4 = new Room("Dark forrest", "");
+            Room r5 = new Room("Crossing", "");
             Room r6 = new Room("Monster", "");
-            Room r7 = new Room("Boss 1", "");
-            Room r8 = new Room("Mørk skov slut", "");
-            Room r9 = new Room("Ødelagt Karavane", "");
-            Room r10 = new Room("By", "");
-            Room r11 = new Room("Sort gyde", "");
-            Room r12 = new Room("By Kryds", "");
-            Room r13 = new Room("Butik", "");
-            Room r14 = new Room("Gammelt ødelagt hus", "");
-            Room r15 = new Room("Gammel Mand", "");
+            Room r7 = new Room("Boss 1", "Niklas the Great will have to be purged");
+            Room r8 = new Room("The dark forrest ends", "The trees is clearing up and the area is getting light");
+            Room r9 = new Room("Broken Caravan", "Strangers help you to the town");
+            Room r10 = new Room("Town", "A lazy town, where nothing ever happens");
+            Room r11 = new Room("Dark alley", "It's too quiet here");
+            Room r12 = new Room("Town crossing", "");
+            Room r13 = new Room("Store", "Closed for now");
+            Room r14 = new Room("Old house", "KEEP OUT!");
+            Room r15 = new Room("Elderly man", "Go on son, meet Kevin");
 			Room r16 = new Room("Kevin the merciful", "Kevin spares your life and sends you home.");
 
             rooms.Add(r1);
