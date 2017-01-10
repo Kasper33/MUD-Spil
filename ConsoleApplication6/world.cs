@@ -66,7 +66,10 @@ namespace ConsoleApplication6
             r7.AddWest(r5);
             r8.AddNorth(r9);
             r8.AddSouth(r5);
-			r9.AddSouth(r8);
+			r9.AddSouth(r10);
+			r9.AddNorth(r10);
+			r9.AddWest(r10);
+			r9.AddEast(r10);
             r10.AddEast(r11);
             r10.AddWest(r3);
             r10.AddNorth(r12);
