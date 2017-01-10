@@ -47,27 +47,30 @@ namespace ConsoleApplication6 {
                 {
                     if (!w.p.CurrentRoom.north.Equals(null))
                     {
+                        Console.WriteLine("You walk north.");
                         w.p.CurrentRoom = w.p.CurrentRoom.north;
                         w.p.EnterRoom();
-                        Console.WriteLine("You walk north.");
+
                     }
                 }
                 if (walk.ToLower().Equals("south") || (walk.ToLower().Equals("s")))
                 {
 					if (!w.p.CurrentRoom.south.Equals(null))
 					{
-						w.p.CurrentRoom = w.p.CurrentRoom.south;
-						w.p.EnterRoom();
                         Console.WriteLine("You walk south.");
+                        w.p.CurrentRoom = w.p.CurrentRoom.south;
+						w.p.EnterRoom();
+
 					}
                 }
                 if (walk.ToLower().Equals("east") || (walk.ToLower().Equals("e")))
                 {
 					if (!w.p.CurrentRoom.east.Equals(null))
 					{
-						w.p.CurrentRoom = w.p.CurrentRoom.east;
-						w.p.EnterRoom();
                         Console.WriteLine("You walk east.");
+                        w.p.CurrentRoom = w.p.CurrentRoom.east;
+						w.p.EnterRoom();
+
 
 					}
 				}
@@ -75,9 +78,10 @@ namespace ConsoleApplication6 {
                 {
 					if (!w.p.CurrentRoom.west.Equals(null))
 					{
-						w.p.CurrentRoom = w.p.CurrentRoom.west;
-						w.p.EnterRoom();
                         Console.WriteLine("You walk west.");
+                        w.p.CurrentRoom = w.p.CurrentRoom.west;
+						w.p.EnterRoom();
+
 
 					}
 				}
