@@ -49,7 +49,7 @@ namespace ConsoleApplication6 {
                     {
                         w.p.CurrentRoom = w.p.CurrentRoom.north;
                         w.p.EnterRoom();
-						Console.WriteLine("You walk north.")
+                        Console.WriteLine("You walk north.");
                     }
                 }
                 if (walk.ToLower().Equals("south") || (walk.ToLower().Equals("s")))
@@ -58,7 +58,7 @@ namespace ConsoleApplication6 {
 					{
 						w.p.CurrentRoom = w.p.CurrentRoom.south;
 						w.p.EnterRoom();
-						Console.WriteLine("You walk south.")
+                        Console.WriteLine("You walk south.");
 					}
                 }
                 if (walk.ToLower().Equals("east") || (walk.ToLower().Equals("e")))
@@ -67,7 +67,7 @@ namespace ConsoleApplication6 {
 					{
 						w.p.CurrentRoom = w.p.CurrentRoom.east;
 						w.p.EnterRoom();
-						Console.WriteLine("You walk east.")
+                        Console.WriteLine("You walk east.");
 
 					}
 				}
@@ -77,7 +77,7 @@ namespace ConsoleApplication6 {
 					{
 						w.p.CurrentRoom = w.p.CurrentRoom.west;
 						w.p.EnterRoom();
-						Console.WriteLine("You walk west.")
+                        Console.WriteLine("You walk west.");
 
 					}
 				}
