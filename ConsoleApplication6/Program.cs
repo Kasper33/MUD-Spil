@@ -22,7 +22,9 @@ namespace ConsoleApplication6 {
                 Console.WriteLine(w.p.CurrentRoom);
             }
             while (playing) {
-                Console.WriteLine("Type Exit to.... tadaaa.. exit");
+                Console.WriteLine("Type Exit to exit");
+                Console.WriteLine("Press Enter to start walking.");
+                Console.WriteLine("When walking type stop to exit");
                 string input = Console.ReadLine();
      
                 if(input.ToLower().Equals("exit"))
@@ -35,7 +37,6 @@ namespace ConsoleApplication6 {
                 }
             }
         }
-
         private static void HandleGame()
         {
             bool isMoving = true;
@@ -50,7 +51,6 @@ namespace ConsoleApplication6 {
                         Console.WriteLine("You walk north.");
                         w.p.CurrentRoom = w.p.CurrentRoom.north;
                         w.p.EnterRoom();
-
                     }
                 }
                 if (walk.ToLower().Equals("south") || (walk.ToLower().Equals("s")))
@@ -60,7 +60,6 @@ namespace ConsoleApplication6 {
                         Console.WriteLine("You walk south.");
                         w.p.CurrentRoom = w.p.CurrentRoom.south;
 						w.p.EnterRoom();
-
 					}
                 }
                 if (walk.ToLower().Equals("east") || (walk.ToLower().Equals("e")))
@@ -70,8 +69,6 @@ namespace ConsoleApplication6 {
                         Console.WriteLine("You walk east.");
                         w.p.CurrentRoom = w.p.CurrentRoom.east;
 						w.p.EnterRoom();
-
-
 					}
 				}
                 if (walk.ToLower().Equals("west") || (walk.ToLower().Equals("w")))
@@ -81,8 +78,6 @@ namespace ConsoleApplication6 {
                         Console.WriteLine("You walk west.");
                         w.p.CurrentRoom = w.p.CurrentRoom.west;
 						w.p.EnterRoom();
-
-
 					}
 				}
                 if(walk.ToLower().Equals("stop"))
@@ -94,4 +89,3 @@ namespace ConsoleApplication6 {
         }
         }
     }
-
