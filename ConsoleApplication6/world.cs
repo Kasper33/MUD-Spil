@@ -13,23 +13,21 @@ namespace ConsoleApplication6
         public World()
         {
             rooms = new List<Room>();
-            Room rStart = new Room("Start", "Welcome champion, you have accepted the challenge to purge all autism from this world. Continue north to start your adventure.");
-            Room r1 = new Room("Crossing", "You stand in a crossing. To your west you can see a house in a bad shape, to your east you can see an entrance to a dark forrest, and to the north you see a small town.");
-            Room r2 = new Room("Abandoned Hut", "");
-            Room r3 = new Room("Health fountain", "");
-            Room r4 = new Room("Dark forrest", "");
-            Room r5 = new Room("Crossing", "");
-            Room r6 = new Room("Monster", "");
-            Room r7 = new Room("Boss 1", "Niklas the Great will have to be purged");
-            Room r8 = new Room("The dark forrest ends", "The trees is clearing up and the area is getting light");
-            Room r9 = new Room("Broken Caravan", "Strangers help you to the town");
-            Room r10 = new Room("Town", "A lazy town, where nothing ever happens");
-            Room r11 = new Room("Dark alley", "It's too quiet here");
-            Room r12 = new Room("Town crossing", "");
-            Room r13 = new Room("Store", "Closed for now");
-            Room r14 = new Room("Old house", "KEEP OUT!");
-            Room r15 = new Room("Elderly man", "Go on son, meet Kevin");
-			Room r16 = new Room("Kevin the merciful", "Kevin spares your life and sends you home.");
+            Room rStart = new Room("Start", "Welcome champion, you have been chosen to make new friends in this cruel world. Continue north to start your adventure of friendship.");
+            Room r1 = new Room("Crossing1", "You stand in a crossing. You can walk east, north or west.");
+            Room r2 = new Room("Abandoned Hut", "You stand at the gate to an what appears like an abandoned house. You can walk east and west, or enter the house.");
+            Room r3 = new Room("Health fountain", "You see a fountain spouting water. You can drink some water, go north or east.");
+            Room r4 = new Room("Dark forrest", "You're inside a dark forrest. You can go west or east.");
+            Room r5 = new Room("Crossing2", "You stand in a crossing. You can go south, east and north.");
+            Room r6 = new Room("Monster", "You see a dark figure bent over a white horse on the dirt. You can go back north, or continue towards the dark figure.");
+            Room r7 = new Room("Boss 1", "You see a crying man in lederhosen, sitting on a tree stump with a beer in his hand. He hasn't seen you yet. You can go back west, or go talk to the man.");
+            Room r8 = new Room("Caravan", "You see an exit out of the forrest. As you leave you get blinded by the sunlight. You see a trading caravan with a broken wheel, and before you know, you see a man walking towards you. You can talk to the man, or run back south into the forrest.");
+            Room r10 = new Room("Town", "As you enter the town, it looks very shady. There are only 6 houses in the city. To the east you see a dark alley between 2 of the houses. Go east down the alley, go north, west or south out of the city.");
+            Room r11 = new Room("Dark alley", "As you walk down the dark alley you can hear footsteps behind you, as you turn around you see a big man with a club. Go back west.");
+            Room r12 = new Room("Town crossing", "You come to a crossing. You can go north, west or south.");
+            Room r14 = new Room("Old house", "As you walk down the road you see an old house. You can enter the house, or go back east.");
+            Room r15 = new Room("Elderly man", "You see an old man, and he sees you. You can talk to him, go north or south.");
+            Room r16 = new Room("Kevin the merciful", "At the end of the road you see a young man leaning up the side of a big tree. You can choose to talk to him or go back south.");
 
             rooms.Add(rStart);
             rooms.Add(r1);
@@ -40,14 +38,12 @@ namespace ConsoleApplication6
             rooms.Add(r6);
             rooms.Add(r7);
             rooms.Add(r8);
-            rooms.Add(r9);
             rooms.Add(r10);
             rooms.Add(r11);
             rooms.Add(r12);
-            rooms.Add(r13);
             rooms.Add(r14);
             rooms.Add(r15);
-			rooms.Add(r16);
+            rooms.Add(r16);
 
             rStart.AddNorth(r1);
             r1.AddNorth(r10);
@@ -64,26 +60,18 @@ namespace ConsoleApplication6
             r5.AddNorth(r8);
             r6.AddNorth(r5);
             r7.AddWest(r5);
-            r8.AddNorth(r9);
+            r8.AddNorth(r10);
             r8.AddSouth(r5);
-			r9.AddNorth(r10);
-            r9.AddSouth(r10);
-            r9.AddEast(r10);
-            r9.AddWest(r10);
             r10.AddEast(r11);
             r10.AddWest(r3);
             r10.AddNorth(r12);
-			r10.AddSouth(r1);
+            r10.AddSouth(r1);
             r11.AddWest(r10);
-            r12.AddEast(r13);
             r12.AddWest(r14);
             r12.AddNorth(r15);
-            r13.AddWest(r12);
             r14.AddEast(r12);
             r15.AddNorth(r16);
             r15.AddSouth(r12);
-            
-
         }
 
         public void PrintWorld()
@@ -98,7 +86,7 @@ namespace ConsoleApplication6
         {
             foreach (Room r in rooms)
             {
-                if(r.navn.Equals(navn))
+                if (r.navn.Equals(navn))
                 {
                     return r;
                 }

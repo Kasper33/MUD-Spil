@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication6 { 
+namespace ConsoleApplication6
+{
 
     class Program
     {
@@ -13,21 +14,23 @@ namespace ConsoleApplication6 {
         {
             w = new World();
             bool playing = true;
-            Console.WriteLine("Hello!! Welcome to India Quest");
+            Console.WriteLine("Hello! Thank you for playing 100% PC Befriending Simulator 2k17.");
+            Console.WriteLine("The game is currently in Alpha, and is not done. At the moment you're only able to walk around.");
+            Console.WriteLine("You can't enter houses, nor interact with obejects and npcs.");
             Room start = w.GetRoom("Start");
-
-            if(start!=null)
+            if (start != null)
             {
                 w.p.CurrentRoom = start;
                 Console.WriteLine(w.p.CurrentRoom);
             }
-            while (playing) {
+            while (playing)
+            {
                 Console.WriteLine("Type Exit to exit");
                 Console.WriteLine("Press Enter to start walking.");
                 Console.WriteLine("When walking type stop to exit");
                 string input = Console.ReadLine();
-     
-                if(input.ToLower().Equals("exit"))
+
+                if (input.ToLower().Equals("exit"))
                 {
                     playing = false;
                 }
@@ -40,7 +43,7 @@ namespace ConsoleApplication6 {
         private static void HandleGame()
         {
             bool isMoving = true;
-            while(isMoving)
+            while (isMoving)
             {
                 string walk = "";
                 walk = Console.ReadLine();
@@ -55,37 +58,37 @@ namespace ConsoleApplication6 {
                 }
                 if (walk.ToLower().Equals("south") || (walk.ToLower().Equals("s")))
                 {
-					if (!w.p.CurrentRoom.south.Equals(null))
-					{
+                    if (!w.p.CurrentRoom.south.Equals(null))
+                    {
                         Console.WriteLine("You walk south.");
                         w.p.CurrentRoom = w.p.CurrentRoom.south;
-						w.p.EnterRoom();
-					}
+                        w.p.EnterRoom();
+                    }
                 }
                 if (walk.ToLower().Equals("east") || (walk.ToLower().Equals("e")))
                 {
-					if (!w.p.CurrentRoom.east.Equals(null))
-					{
+                    if (!w.p.CurrentRoom.east.Equals(null))
+                    {
                         Console.WriteLine("You walk east.");
                         w.p.CurrentRoom = w.p.CurrentRoom.east;
-						w.p.EnterRoom();
-					}
-				}
+                        w.p.EnterRoom();
+                    }
+                }
                 if (walk.ToLower().Equals("west") || (walk.ToLower().Equals("w")))
                 {
-					if (!w.p.CurrentRoom.west.Equals(null))
-					{
+                    if (!w.p.CurrentRoom.west.Equals(null))
+                    {
                         Console.WriteLine("You walk west.");
                         w.p.CurrentRoom = w.p.CurrentRoom.west;
-						w.p.EnterRoom();
-					}
-				}
-                if(walk.ToLower().Equals("stop"))
+                        w.p.EnterRoom();
+                    }
+                }
+                if (walk.ToLower().Equals("stop"))
                 {
                     isMoving = false;
                 }
             }
-            
-        }
+
         }
     }
+}
